@@ -17,6 +17,7 @@ export const {
   signIn,
 } = NextAuth({
   adapter: PrismaAdapter(db),
+  trustHost: true,
   providers: [
     github({
       clientId: GITHUB_CLIENT_ID,
